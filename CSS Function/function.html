@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function-Hàm</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+        
+        #box::after {
+            content: attr(data-title);
+        }
+        
+        a::after {
+            content: "("attr(href)")"
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box" data-title="Đây là box">
+
+    </div>
+    <!-- hãy thử sửa bên trong href xem điều gì xảy ra...có phải link bên phần content tự sửa luôn ko hihi -->
+    <a href="#linkacb">Học LT</a>
+</body>
+
+</html>
+
+<!-- 
+	var(): biến, có document rồi nè
+	linear-gradient(): chuyển đổi màu (2 màu từ trên xuống, như kiểu ombre)
+	rgba(): màu có độ trong
+	rgb(): màu...
+	calc(): đại loại như tính toán, cả đvi tuyệt đối hay tương đối đều sd dc
+		vd: width cacl(120px + 50px)
+	attr(): thuộc tính thẻ html
+		vd:
+		<a href="#link">Học LT(#link)</a> : nếu sửa url đó phải sửa 2 chỗ,
+		nên có cách sửa như sau:
+		xóa đoạn (#link) đi, và thêm đoạn này vào css, khi sửa url bên tag html thì sẽ tự động được sửa bên content
+		a::after{
+			content: "("attr(href)")"
+		}
+	xem ví dụ ở trên để hiểu
+
+-->

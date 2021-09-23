@@ -1,0 +1,62 @@
+/* font family */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+:root {
+    /* font family */
+    --font--wordsans: 'Work Sans', sans-serif;
+    --font--roboto: 'Roboto', sans-serif;
+    --font--montserrat: 'Montserrat', sans-serif;
+    /* color */
+    --main--color: #ffc178;
+    --content--color: 5a6e79;
+    --heading--color: 252c3a;
+    /* width */
+    --wrappper: 1920px;
+    --conaiter: 1170px;
+    --content: 16px;
+    --heading: 40px;
+    --sub-content: 18px;
+    /* font size */
+    --size--title: 40px;
+}
+
+.block__title {
+    font-size: var(--size--title);
+    /* color: ; */
+    /* font-family: ; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1 rem bằng 10px */
+}
+
+.wrappper {
+    max-width: var(--wrappper);
+    margin: 0 auto
+}
+
+.conaiter {
+    max-width: var(--conaiter);
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    direction: unset;
+}
+
+h2 {
+    font-family: var(--font--wordsans);
+}

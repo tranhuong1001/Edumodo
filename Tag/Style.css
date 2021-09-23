@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.heading-h4 {
+    color: rgb(6, 84, 201);
+    font-size: large;
+}
+
+#first-head {
+    color: rgb(236, 6, 6);
+}

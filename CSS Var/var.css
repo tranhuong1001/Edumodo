@@ -1,0 +1,25 @@
+/* Cách đặt biến cho CSS */
+
+
+/* biến toàn cục (global) */
+
+:root {
+    --text-color: rgb(25, 162, 226);
+}
+
+
+/* trong thằng h1 này sử dụng biến cục bộ (local),nếu muốn nó ko sử dụng 
+biến global tức là khác bọn kia, có thể tự tạo style cho nó*/
+
+h1 {
+    --h1-color: violet;
+    color: var(--h1-color);
+}
+
+h6 {
+    color: var(--text-color);
+}
+
+p {
+    color: var(--text-color);
+}

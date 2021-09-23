@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phần tử giả</title>
+    <style>
+        .box {
+            background: violet;
+            width: 300px;
+            height: 300px;
+        }
+        /* giờ sẽ thêm vô 2 thằng box mà ko cần tạo bên html nhé */
+        
+        .box::before {
+            /* sao phải display block, do ptu giả chưa dc định nghĩa sẵn khối như trong html thằng div trong html nó đã dc định nghĩa sẵn rồi, ptu giả ko có nên phải tạo để nhìn thấy nó */
+            /* ko dc thiếu content, nó như cái hộp có nội dung là cái khối thì mới set css cho nó dc */
+            content: "";
+            display: block;
+            width: 100px;
+            height: 100px;
+            background: brown;
+        }
+        
+        .box::after {
+            content: "text";
+            font-size: larger;
+            display: block;
+            width: 50px;
+            height: 50px;
+            background: rgb(0, 0, 0);
+        }
+        
+        h2::first-letter {
+            font-size: 100px;
+            color: red;
+        }
+        
+        p::first-line {
+            color: blue;
+        }
+        
+        h1::selection {
+            background-color: brown;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+    </div>
+    <h1>Lorem Ipsum </h1>
+    <h2>CSS Element</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley <br> of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries</p>
+</body>
+
+</html>
+<!-- 
+	Phần tử giả để làm gì, để viết thẳng vào css mà html ko có,
+	tức là ko cần viết trong html, có thể áp dụng cho cả text trong ptu giả
+	::before: luôn đứng đầu, coi ví dụ 
+	::after: đứng cuối, coi vd luôn
+	::first-letter: chữ đầu tiên nè
+	::first-line: dòng đầu tiên
+	::selection: chọn, bôi đen
+ -->

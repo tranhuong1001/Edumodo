@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container {
+            min-height: 42px;
+            background-color: red;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .nav-list {
+            padding-left: 0;
+            margin: auto 14px;
+        }
+        
+        .nav-item {
+            color: #fff;
+            list-style: none;
+            margin: 0 18px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="nav-list">
+            <li class="nav-item">Gioi thieu</li>
+            <li class="nav-item">Ket noi</li>
+            <li class="nav-item">Ung dung</li>
+        </ul>
+        <ul class="nav-list">
+            <li class="nav-item">Dang ki</li>
+            <li class="nav-item">Dang nhap</li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+<!-- 
+Flexbox:
+    -display:                flex, inline-flex => sử dụng flex
+    -flex-direction:         phướng hướng của main axis
+	    + row(mặc định):    nằm ngang 
+	    + column:           nằm dọc
+    -flex-wrap:              định dạng cách hiển thị của các item
+	    + nowrap:           mặc định
+	    + wrap:             xuống dòng, ví dụ 6 thì đẩy 3 th kia xuống dưới
+	    + wrap-reverse:     đảo chiều cross start và cross end( nhảy lên trên, vd như 6 th thì 3 th kia bị đẩy lên trên, ngược với giá trị wrap)
+    -flex-basis:             thay đổi kích thước main size(kích thước item)
+    -justify-content(sd cho thẻ cha(flex-container)):                căn dc flex item theo hướng của trục main axis(ngang)
+	    + space-between:                                            làm 2 item đối diện nhau(cách nhau 1 khoảng) mà ko có 1 khoảng ở 2 bên 
+        + space-around:                                             giống space-between nhưng có kc 2 bên, kc các item ở giữa gấp đôi khoảng cách 2 bên
+        + space-evenly:                                             các kc bằng nhau kể cả 2 bên
+    -justify-self(sd cho thẻ con(flex-item), khi đã set jc cho thẻ cha r thì ko cần sd cái này để set cho thẻ con :v)
+    -align-content(sd cho thẻ cha(flex-container)):                  giống justify-content nhưng cùng hướng với trục coss asix (dọc)
+    -align-self(sd cho thẻ con(flex-item):                           đặt chiều cho các thẻ item con
+    -align-items:                                                    giống align-self dùng để đổi chiều 
+    -flex-grow:                                                      <number> lớn lên, thay đổi kích thước của flex-item theo hướng main size
+    -flex-shrink:                                                    thu nhỏ
+    -flex:                                                           short hand của flex-basis flex-grow flex-shrink
+    -flex-flow:                                                      short hand của flex-wrap và flex-direction
+    -order:                                                          quyết định thứ tự hiển tự th nào trước th nào sau
+
+ -->

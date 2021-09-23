@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>MENU</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        .header {
+            height: 46px;
+            background-color: rgb(77, 30, 3);
+        }
+        
+        .sub-menu {
+            float: right;
+        }
+        
+        #nav li {
+            display: inline-block;
+            margin-right: 30px;
+        }
+        
+        #nav li a {
+            color: #fff;
+            padding: 0 16px;
+            line-height: 46px;
+            list-style-type: none;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        
+        #nav li:hover a {
+            display: inline-block;
+            color: rgb(0, 0, 0);
+            background-color: #fff;
+        }
+        /* btn home */
+        
+        #nav .btn-home {
+            display: inline-block;
+            margin-left: 50px;
+            line-height: 46px;
+            font-size: 25px;
+        }
+        
+        #nav .btn-home>a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        
+        #nav .btn-home a:hover {
+            padding: 0 10px;
+            display: inline-block;
+            color: rgb(0, 0, 0);
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <ul id=nav>
+            <div class="btn-home">
+                <a href="#">Acb</a>
+            </div>
+            <div class="sub-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li>
+            </div>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>

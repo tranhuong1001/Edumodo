@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ chọn Selector</title>
+    <!-- css internal: nằm trong cặp thẻ <style> trong phần head của html -->
+    <style>
+        /* để chọn thẻ p hoặc h2 trong thẻ div có 2 cách: div > h2 hoặc h2 (p cách sd tương tự) */
+        
+        div>h2 {
+            color: red;
+        }
+        
+        p {
+            color: #00f148;
+        }
+        
+        .para {
+            font-size: 30px;
+        }
+        /* 1 cách chọn thẻ con trong div */
+        
+        p.p2 {
+            color: orange;
+        }
+        /* 1 cách khác chọn thẻ con trong div */
+        
+        div .p3 {
+            color: rgb(255, 0, 212);
+        }
+        
+        div #heading {
+            font-size: small;
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Một bài báo cho rằng</h2>
+        <p class="para p1">Bà Phương Hằng có đầy đủ chứng cứ mới mạnh miệng...</p>
+        <p class="para p2">Bà Phương Hằng có</p>
+        <p class="para p3">Bà Phương Hằng có</p>
+        <h3 id=heading>Next...</h3>
+        <!-- ok set style chung cho 3 thẻ p, trong đó có 2/3 thẻ khác biệt nhau, ok how can i do that?? -see that -->
+    </div>
+
+</body>
+
+</html>
+
+<!-- 
+
+Selector		Ví dụ		Mô tả
+.class			.intro		Chọn tất cả các thẻ có class=“intro”
+.class1.class2		.name1.name2	Chọn tất cả các thẻ có cả name1 và name2 được đặt trong thuộc tính class của nó
+.class1 .class2		.name1 .name2	Chọn tất cả các thẻ có class=“name2” là con của một phần tử có class=“name1”
+*			*		Chọn tất cả các thẻ
+element			h2		Chọn tất cả các thẻ h2
+element.class		div.box		Chọn tất cả thẻ div có class=“box”
+element, element	div, h2		Chọn tất cả thẻ div và h2
+element element		div p		Chọn tất cả thẻ p trong thẻ div
+element > element	div > p		Chọn tất cả thẻ p là con trực tiếp của thẻ div
+element + element	div + p		Chọn thẻ p đứng liền kề sau thẻ div
+element ~ element	div ~ p		Chọn tất cả thẻ p đứng sau thẻ div
+ 
+Phân biệt giữa div > .class, div .class và div + .class: 
+div > .class : child selector, chọn tất cả phần tử con trực tiếp của div có thuộc tính lớp là "class".
+div .class:  decendant (hậu duệ) selectors, chọn tất cả phần tử bên trong div có thuộc tính lớp là "class".
+div + .class:  adjacent sibling selector, chọn phần tử đứng sau div có thuộc tính lớp là "class".
+-->
+
+<!-- Độ ưu tiên trong CSS, gọi sau (tức mới nhất) sẽ dc ưu tiên hơn
+	Inline > #id > .class > tag
+   càng trỏ vào chi tiết càng dc ưu tiên hơn
+   ngoại trừ !important khi sử dụng cái này là độ ưu tiên đỉnh kao rồi :v
+
+-->
